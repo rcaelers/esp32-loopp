@@ -20,4 +20,3 @@ before_install:
 
 script:
   - docker run --tty --rm -v "$TRAVIS_BUILD_DIR:/build/project" rcaelers/esp32-loopp ./travis-build.sh master gcc8 cmake
-  - docker run --tty --rm -v "$TRAVIS_BUILD_DIR:/build/project" rcaelers/esp32-loopp ./travis-build.sh release/v3.2 gcc8 cmake
