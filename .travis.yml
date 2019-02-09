@@ -1,0 +1,23 @@
+sudo: required
+
+dist: trusty
+
+addons:
+  apt:
+    packages:
+      - docker-ce
+
+services:
+  - docker
+
+notifications:
+  email:
+    on_success: change
+    on_failure: change
+
+before_install:
+  - docker build -t rcaelers/esp32-loopp docker
+
+script:
+  - docker run --tty --rm -v "$TRAVIS_BUILD_DIR:/build/project" rcaelers/esp32-loopp ./travis-build.sh master gcc8 cmake
+  - docker run --tty --rm -v "$TRAVIS_BUILD_DIR:/build/project" rcaelers/esp32-loopp ./travis-build.sh release/v3.2 gcc8 cmake
