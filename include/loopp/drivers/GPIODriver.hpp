@@ -33,6 +33,8 @@
 
 #include "loopp/drivers/DriverRegistry.hpp"
 
+#include "driver/gpio.h"
+
 namespace loopp
 {
   namespace drivers
