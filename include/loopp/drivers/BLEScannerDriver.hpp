@@ -32,6 +32,8 @@
 
 #include "loopp/utils/json.hpp"
 
+#include "driver/gpio.h"
+
 namespace loopp
 {
   namespace drivers
