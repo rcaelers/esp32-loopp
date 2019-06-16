@@ -1,4 +1,4 @@
-Boost 1.69.0
+Boost 1.70.0
 ===============
 
 This partial copy of Boost has been generated with the BCP tool:
